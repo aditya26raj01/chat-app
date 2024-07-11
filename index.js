@@ -7,7 +7,11 @@ const cookiesParser = require("cookie-parser");
 const { app, server } = require("./socket/index");
 
 // const app = express()
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://chat-app-eight-tan.vercel.app",
+  })
+);
 app.use(express.json());
 app.use(cookiesParser());
 
